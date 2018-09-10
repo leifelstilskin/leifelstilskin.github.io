@@ -2,26 +2,6 @@
 
 
 body {
-    background-image: url("rooftops.jpg"); */
-
-  }
-  body {
-      color:  #ffffff;
-  }
-  h1{
-    color: black;
-  }
-  h2{
-    color: black;
-  }
-  h3{
-    color: black;
-  }
-  h4{
-    color: white;
-  }
-  p.capitalize {
-    text-transform: capitalize;
-}
-
+    /* background-image: url("rooftops.jpg"); */
+    color:#cc6699;
 }
