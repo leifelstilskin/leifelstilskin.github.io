@@ -1,0 +1,33 @@
+
+
+
+body {
+    background-image: url("rooftops.jpg");
+      background-blend-mode: lighten;
+      background-color:  #e6b3cc;
+  background-blend-mode: screen;
+    }
+
+
+  body {
+      color:  black;
+
+  }
+  h1{
+    color: black;
+  }
+  h2{
+    color: black;
+  }
+  h3{
+    color: black;
+  }
+  h4{
+    color: black;
+  }
+  p.capitalize {
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+}
