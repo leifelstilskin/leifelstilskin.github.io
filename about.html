@@ -2,11 +2,30 @@
 <html lang="en">
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
   <title>About</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
-<link rel="stylesheet" href="css/style.css" type="text/css">
 <script src="modernizr.custom.05819.js"></script>
+<script>
+  function insert(num){
+    document.form.textview.value = document.form.textview.value+num;
+  }
+  function equal(){
+    var exp = document.form.textview.value;
+    if(exp){
+        document.form.textview.value = eval(exp);
+    }
+  }
+  function clean(){
+    document.form.textview.value = "";
+  }
+
+  function back(){
+    var exp = document.form.textview.value;
+    document.form.textview.value = exp.substring(0, exp.length-1);
+  }
+</script>
 
   <style>
 
@@ -14,9 +33,6 @@
     background-color: #ffffff;
     margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-}
-h3{
-  color: white;
 }
 
 .topnav {
@@ -47,6 +63,32 @@ h3{
   h1{
     padding-left:16px
   }
+
+  .button{
+    width:50;
+    height:50;
+    font-size: 25;
+    margin: 2;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+
+
+  }
+  .textview{
+    width:900;
+    margin:10;
+    font-size: 30;
+    padding: 5;
+
+
+  }
+  .calculator{
+    /* text-align: left; */
+  }
+
+
   </style>
 </head>
 
@@ -75,7 +117,7 @@ h3{
   </div>
 
   <div>
-<p style="padding-right:16px">
+<p style="padding-left:16px">
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -85,12 +127,13 @@ culpa qui officia deserunt mollit anim id est laborum."
 </p>
 </div>
 
-<div>
+<div style="padding-right:16px">
 <img src="snakeskullrose.png" alt="Gundam" style="float:right" width="400" height="500">
-<img style="padding-right:16px" src="moodboard2.png" alt="moodboard2" style="float: left" width="450" height="450">
 </div>
 
 
+<div style="padding-left:16px">
+<img src="moodboard2.png" alt="moodboard2" style="padding-left:16px" width="450" height="450">
 <p>
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -101,16 +144,63 @@ culpa qui officia deserunt mollit anim id est laborum."
 </p>
 </div>
 <div>
-  <h3 style="padding-left:16px">Why Stilskin Co.?</h3>
+  <h3 style="padding-left:16px">Chapter 2, Price Calculator</h3>
 <p style="padding-left:16px">
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum."
-</p>
+What I wanted to do is take the normal calculator and tweak it to serve a purpose I'd
+need on a site like mine. Obviously a random calculator is a bit odd most times
+but the basic development seems to be the foundation for creating functions and adding scripts.
+So I took the normal 1-9 buttons then replaced them with products and services a
+site might have. Then took the values that would be added in association with them to
+a comparative amount, (ie 1 tshirt = 25 (amount in dollars)). In the end what I wanted
+to do was just make it applicable to my site. Which does need some work aestetically but
+slowly it will get there. Thanks for looking!</p>
+
 </div>
+
+
+<div class="calculator">
+  <h4>Product Price and Service Calculator</h4>
+  <form name="form">
+<input class="textview" name="textview">
+<table>
+
+  <tr>
+    <td><input class="button" input type="button" value="Product Photoshoot" onclick="insert(200)"></td>
+    <td><input class="button" input type="button" value="Print Ready Graphics" onclick="insert(175)"></td>
+    <td><input class="button" input type="button" value="Socks" onclick="insert(15)"></td>
+    <td><input class="button" input type="button" value="Skate Deck" onclick="insert(60)"></td>
+  </tr>
+
+  <tr>
+    <td><input class="button" input type="button" value="Logo design" onclick="insert(100)"></td>
+    <td><input class="button" input type="button" value="Tshirt Design" onclick="insert(150)"></td>
+    <td><input class="button" input type="button" value="Look Book" onclick="insert(15)"></td>
+    <td><input class="button" input type="button" value="C" onclick="clean()"></td>
+  </tr>
+
+  <tr>
+    <td><input class="button" input type="button" value="Tshirt" onclick="insert(25)"></td>
+    <td><input class="button" input type="button" value="Beanie" onclick="insert(15)"></td>
+    <td><input class="button" input type="button" value="Jockey Hat" onclick="insert(20)"></td>
+    <td><input class="button" input type="button" value="+" onclick="insert('+')"></td>
+  </tr>
+
+  <tr>
+    <td><input class="button" input type="button" value="Hoodie" onclick="insert(40)"></td>
+    <td><input class="button" input type="button" value="Windbreaker" onclick="insert(50)"></td>
+    <td><input class="button" input type="button" value="Sweater" onclick="insert(35)"></td>
+    <td><input class="button" input type="button" style="height:105" value="=" onclick="equal()"></td>
+  </tr>
+
+
+</table>
+  </form>
+</div>
+</br>
+
+
+
+
 
 
 <div id="validator">
