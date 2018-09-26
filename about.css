@@ -1,0 +1,38 @@
+body {
+    background-image: url("rooftops.jpg");
+      background-blend-mode: lighten;
+      background-color:  #e6b3cc;
+  background-blend-mode: screen;
+    }
+    article {
+       width: 960px;
+       height: 250px;
+       text-align: left;
+    }
+
+    article h2 {
+       font-weight: bold;
+       font-size: 24px;
+       padding: 10px;
+    }
+
+
+
+    input {
+       float: left;
+       clear: left;
+       margin: 10px;
+    }
+
+    label {
+       float: left;
+       font-size: 1.4em;
+    }
+
+    /* total div */
+    article div {
+       width: 50%;
+       float: left;
+       font-size: 18px;
+       font-weight: bold;
+    }

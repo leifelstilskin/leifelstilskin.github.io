@@ -2,11 +2,11 @@
 <html lang="en">
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
   <title>About</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<script src="modernizr.custom.05819.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8"/>
+<script src="JS/modernizr.custom.05819.js"></script>
 <script>
   function insert(num){
     document.form.textview.value = document.form.textview.value+num;
@@ -198,16 +198,57 @@ slowly it will get there. Thanks for looking!</p>
 </div>
 </br>
 
+<!--I tinkered with another Hands on Project from the back of the book and messed with the price
+total tool one.  -->
+<article>
+      <h5>Item selections</h5>
+      <p>Here is one of my projects for chapter 3, creating a price total tool
+        using a "for statement" and an "if statement."
+      <form>
+         <input type="checkbox" id="item1" value="100" />
+         <label for="item1">Graphic Tee Design ($100.00)</label>
+         <input type="checkbox" id="item2" value="80" />
+         <label for="item2">Print Ready Graphic ($80.00)</label>
+         <input type="checkbox" id="item3" value="120" />
+         <label for="item3">Logo Design ($120.00)</label>
+         <input type="checkbox" id="item4" value="15" />
+         <label for="item4">Look Book ($15.00)</label>
+         <input type="checkbox" id="item5" value="25" />
+         <label for="item5">"Still Standing" Tshirt ($25.00)</label>
+         <input type="button" value="Submit" id="submit" />
+      </form>
+      <div>
+         <p id="total"></p>
+      </div>
+   </article>
 
 
 
 
 
-<div id="validator">
-<a href="http://validator.w3.org/nu/?doc=https://about.html">
-HTML 5 Validation</a>
+<script>
+//Here is where I added values to the selected boxes
+function calcTotal(){
+   var itemTotal = 0;
+   var items = document.getElementsByTagName("input");
+     for (var i = 0; i < 5; i++){
+       if (items[i].checked) {
+         itemTotal += (items[i].value * 1);
+       }
+     }
+     document.getElementById("total").innerHTML =
+     "Your Total is $" + itemTotal + ".00";
+  var submitButton = document.getElementById("submit");
+  if (submitButton.addEventListener){
+    submitButton.addEventListener("click", calcTotal,
+  false);
+} else if (submitButton.attachEvent){
+  submitButton.attachEvent("onclick", calcTotal);
+}
+}
+</script>
 
-</div>
+
 
 </body>
 </html>

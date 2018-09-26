@@ -2,7 +2,7 @@
 <html lang="en">
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="contact.css">
   <title>Contact</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
@@ -14,6 +14,7 @@
     background-color: #ffffff;
     margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .topnav {
@@ -71,11 +72,54 @@ for others as well. Have a design you need help tweaking, creating and or drafti
 drop us a line. We are more than happy to work for other people a well.</p>
 <!--I would add a contact box at this point -->
 
-<div id="validator">
-<a href="http://validator.w3.org/nu/?doc=https://contact.html">
-HTML 5 Validation</a>
+<article>
+      <h2>Contact Us!</h2>
+<p> Here is another project from Chapter 3 using a conditional statement inregards to checking
+  browser support of the HTML5 placeholder.</p>
+  <!-- Starting code for the Conditional Statement Project -->
+      <form>
+        <fieldset id="contactinfo">
+          <label for="nameinput">
+            Name
+            <input type="text" id="nameinput" name="name" placeholder="First and Last Name Please" />
+          </label>
+          <label for="emailinput">
+            Email
+            <input type="text" id="emailinput" name="email" placeholder="email@example.com" />
+          </label>
+          <label for="phoneinput">
+            Phone
+            <input type="text" id="phoneinput" name="phone" placeholder="###-###-####" />
+          </label>
+        </fieldset>
+        <fieldset id="submitbutton">
+          <input type="submit" value="Submit" />
+        </fieldset>
+     </form>
+   </article>
 
-</div>
+
+<script>
+function insertPlaceholders(){
+  if (!modernizr.input.placeholder){
+    document.getElementById("nameinput").value =
+    "first and last name";
+    document.getElementById("emailinput").value =
+    "address@example.com";
+    document.getElementById("phoneinput").value =
+    "###-###-####";
+  }
+}
+  if (window.addEventListener){
+    window.addEventListener("load", insertPlaceholders,
+  false);
+} else if (window.attachEvent){
+  window.attachEvent("onload", insertPlaceholders);
+}
+
+
+
+</script>
 
 </body>
 </html>

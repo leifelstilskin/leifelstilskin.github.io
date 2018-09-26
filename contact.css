@@ -1,0 +1,98 @@
+body {
+    background-image: url("rooftops.jpg");
+      background-blend-mode: lighten;
+      background-color:  #e6b3cc;
+  background-blend-mode: screen;
+    }
+
+
+  body {
+      color:  black;
+
+  }
+  h1{
+    color: black;
+  }
+  h2{
+    color: black;
+  }
+  h3{
+    color: black;
+  }
+  h4{
+    color: black;
+  }
+  p.capitalize {
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+}
+/* main content */
+article {
+   width: 960px;
+   text-align: center;
+   padding-bottom: 20px;
+   border-bottom: 1px solid black;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+}
+
+article h2 {
+   font-weight: bold;
+   font-size: 30px;
+   padding: 5px;
+}
+
+#submitbutton input {
+  font-family: georgia, "times new roman", times, serif;
+  }
+fieldset {
+  position: relative;
+  padding: 1em;
+  background: white;
+  text-align: left;
+  }
+form {
+  background: white;
+  padding: 10px 5px 7px 5px;
+  margin: 0 auto;
+  width: 750px;
+  border: 2px solid black;
+  }
+input {
+  font-size: 1em;
+  }
+input:focus {
+  background: #e3d5ba;
+  }
+label {
+  display: block;
+  position: relative;
+  margin: 12px 0;
+  }
+#contactinfo input {
+  position: absolute;
+  left: 100px;
+  }
+#nameinput, #emailinput {
+  width: 30em;
+  }
+#phoneinput {
+  width: 12em;
+  }
+#submit {
+  background: #e3d5ba;
+  font-size: 1.25em;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  }
+#submitbutton {
+  padding: 0.5em 0;
+  margin-bottom: 0;
+  text-align: center;
+  }
