@@ -1,18 +1,15 @@
-
+html{
+  background-image: url("rooftops.jpg");
+  background-blend-mode: lighten;
+  background-color:  #e6b3cc;
+  background-blend-mode: screen;
+}
 
 
 body {
-    background-image: url("rooftops.jpg");
-      background-blend-mode: lighten;
-      background-color:  #e6b3cc;
-  background-blend-mode: screen;
+color:  black;
     }
 
-
-  body {
-      color:  black;
-
-  }
   h1{
     color: black;
   }
@@ -28,6 +25,7 @@ body {
   p.capitalize {
     text-transform: capitalize;
     font-size: 25px;
+
 }
 
 }

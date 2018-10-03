@@ -11,10 +11,12 @@
   <style>
 
   body {
-    background-color: #ffffff;
+    background-image: url("rooftops.jpg");
+    background-blend-mode: lighten;
+    background-color:  #e6b3cc;
+    background-blend-mode: screen;
     margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .topnav {
@@ -46,10 +48,42 @@
     padding-left:16px
   }
   </style>
+   <script>
+   // here are my alert functions for my error alerts. Each if statement set for
+   // each text field with proper msgs for what is missing in each text field
+   // Form will not send if any of these fields are blank or even if one is. If you try
+   // you will see the following alert(msg) pop up for each of the missing fieldsets
+   // Will change the msgs when launching...maybe. 
+function checkforblanksfields(){
+if (document.getElementById('nameinput').value == ""){
+  alert('Homie...Whats your name?');
+  return false;
+}
+if (document.getElementById('emailinput').value == ""){
+  alert('Bruh, get me that email pleaseuhh');
+  return false;
+  }
+  if (document.getElementById('phoneinput').value == ""){
+    alert('let me get them digits too');
+    return false;
+    }
+    if (document.getElementById('projectinput').value == ""){
+      alert('Yo, let me know what I can do for ya');
+      return false;
+      }
+}
+// I'd Like to add a confirmation to the form being submitted, like another msg that confirms
+// that the form was sent. Looking at animation and javascript tutorials at the moment to
+// maybe add that next time.
+  </script>
 </head>
 
+<!--These are the images at the top of the page. For the moment they are just place holders
+Im working on editing a landscape photo/graphic to put there, or maybe a video if it can be
+compressed and hold its resolution well enough -->
 <body>
-  <div style="padding-left:16px">
+<header>
+  <div class="headerimages" style="padding-left:16px">
 <img src="skinandeyes.jpg" alt="eye"  width="200" height="200">
 <img src="skinandeyes.jpg" alt="eye"  width="200" height="200">
 <img src="skinandeyes.jpg" alt="eye"  width="200" height="200">
@@ -58,39 +92,55 @@
 <img src="skinandeyes.jpg" alt="eye"  width="200" height="200">
 </div>
 
-  <div class="topnav">
+<!-- Menu Navigation, looking into adding a dropdown menu to projects to lead to
+different galleries -->
+<div class="topnav">
     <a class="active" href="index.html">Home</a>
     <a href="#about">Blog</a>
     <a href="#news">Projects</a>
     <a href="#contact">Contact</a>
     <a href="about.html">About</a>
   </div>
+  </header>
+
 
 <h1>We do more than just "our stuff"</h1>
 <p>Hey we love working on our designs and shirts but we love to design and create
 for others as well. Have a design you need help tweaking, creating and or drafting
 drop us a line. We are more than happy to work for other people a well.</p>
-<!--I would add a contact box at this point -->
+<!--I would add a contact box at this point (chapter1) UPDATE (chapter4): DONE -->
+
+<h2>Contact Us!</h2>
+<p> Here is another project from Chapter 3 using a conditional statement in regards to checking
+browser support of the HTML5 placeholder. UPDATE for Chapter 4, added error messages
+when trying to submit form without filling text fields. To see all error alerts
+enter each text field individually then submit.</p>
+<!-- Played around with borders here -->
 
 <article>
-      <h2>Contact Us!</h2>
-<p> Here is another project from Chapter 3 using a conditional statement inregards to checking
-  browser support of the HTML5 placeholder.</p>
-  <!-- Starting code for the Conditional Statement Project -->
-      <form>
+  <!-- Chapter 4, changed from the inital contact form from chapter 3 and added a text field for
+one to leave a message, and added a project title to allow the user to describe what they would want done -->
+      <form onsubmit="return checkforblanksfields()">
         <fieldset id="contactinfo">
           <label for="nameinput">
             Name
-            <input type="text" id="nameinput" name="name" placeholder="First and Last Name Please" />
+            <input type="text" id="nameinput" name="name" placeholder="First and Last Name Please" style="border: 3px solid black" />
           </label>
           <label for="emailinput">
             Email
-            <input type="text" id="emailinput" name="email" placeholder="email@example.com" />
+            <input type="text" id="emailinput" name="email" placeholder="email@example.com" style="border: 3px solid black" />
           </label>
           <label for="phoneinput">
             Phone
-            <input type="text" id="phoneinput" name="phone" placeholder="###-###-####" />
+            <input type="text" id="phoneinput" name="phone" placeholder="###-###-####" style="border: 3px solid black"/>
           </label>
+          <label for="messageinput">
+            Project Name
+            <input type="text" id="projectinput" name="project" placeholder="Project Name" style="border: 3px solid black" />
+          </label>
+        </fieldset>
+        <fieldset id="textfield">
+          <textarea id="message" placeholder="Leave A Message..." style="width: 700px; height:200px; border: 3px solid black"></textarea>
         </fieldset>
         <fieldset id="submitbutton">
           <input type="submit" value="Submit" />
@@ -98,7 +148,7 @@ drop us a line. We are more than happy to work for other people a well.</p>
      </form>
    </article>
 
-
+<!-- Chapter 3, added this as extra practice with one of the hands on projects from chapter 3-->
 <script>
 function insertPlaceholders(){
   if (!modernizr.input.placeholder){
@@ -108,6 +158,8 @@ function insertPlaceholders(){
     "address@example.com";
     document.getElementById("phoneinput").value =
     "###-###-####";
+    document.getElementById("projectinput").value =
+    "Project Name";
   }
 }
   if (window.addEventListener){
@@ -116,9 +168,6 @@ function insertPlaceholders(){
 } else if (window.attachEvent){
   window.attachEvent("onload", insertPlaceholders);
 }
-
-
-
 </script>
 
 </body>
