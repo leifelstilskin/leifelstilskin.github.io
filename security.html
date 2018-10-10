@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="security.css">
+  <title>Security</title>
+<meta charset="utf-8">
+<script src="scripts/modernizr.custom.05819.js"></script>
+
+  <style>
+
+  body{
+    margin: 0px;
+    border: 0px;
+  }
+  .eyes{
+    position: relative;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .topnav a.active {
+    background-color: #993366;
+    color: white;
+  }
+
+  .photo{
+    position: relative;
+  }
+
+  .P2{
+    position: relative;
+  }
+
+  .videos {
+    position: relative;
+
+  }/*End of header topnav  */
+.
+p{
+  text-align: left;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+    <div class="eyes" style="padding-left:16px" align="left">
+  <img src="skinandeyes.jpg" alt="eye"  width="200" height="200">
+  </div>
+  <div class="topnav">
+    <a class="active" href="security.html">Security</a>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </div>
+</header>
+
+
+<div class="subheader">
+  <h1 class="page-title">Chapter 5 Project - Adding Screen and Navigator Objects:</h1>
+  <p class="intro">Here I, <em>"Add(ed) a page to your individual website that educates visitors about
+web security. Report the values of at least six properties from Tables 5-10
+and 5-11 from Chapter 5 to illustrate the breadth of information about a
+user's computer that a web app can access. Perform a web search on practices
+for using the web safely, and include links to at least three sources,
+along with a one-sentence summary of each."<em></p>
+</div>
+
+
+<h2>Why Security is important:</h2>
+
+ <div class="Tech_Tips">
+    <ul>
+      <li><a href="https://www.beyondsecurity.com/blog/web-security-basics" target="_blank">A Blog post About
+        Web Security</a>
+        <p>Here we have an article outlining the basics of Web Security.</p>
+      </li>
+
+      <li><a href="https://securingtomorrow.mcafee.com/consumer/consumer-threat-notices/10-tips-stay-safe-online/" target="_blank">Securing Tomorrow. Today.</a>
+      <p>Here we have 10 tips about how to stay safe online.</p>
+      </li>
+
+      <li><a href="https://methodic.marketing/top-7-safe-internet-browsing-practices-to-begin-today/" target="_blank">Safe Browsing Practices</a>
+      <p>This link is to an article about safebrowsing practices and other tips you can start today to protect
+        yourself online.</p>
+      </li>
+    </ul>
+</div>
+
+<h3>Information available from broswer:<h3>
+<table id="data" style="width:100%">
+  <tr>
+      <th>Property</th>
+      <th>Information shared</th>
+  </tr>
+  <th></th>
+  </tr>
+
+                <tr>
+                    <th>Browser</th>
+                    <th id="varappName"></th>
+                </tr>
+                <tr>
+                    <th>Web Browser Version</th>
+                    <th id="varappVersion"></th>
+                </tr>
+                <tr>
+                    <th>OS platform</th>
+                    <th id="varplatform"></th>
+                </tr>
+                <th>HTTP User Agent</th>
+                <th id="varuserAgent"></th>
+            </tr>
+                <tr>
+                    <th>Screen Height</th>
+                    <th id="varheight"></th>
+                </tr>
+                <tr>
+                    <th>Screen Width</th>
+                    <th id="varwidth"></th>
+                  </tr>
+                <tr>
+                    <th>Color Depth</th>
+                    <th id="varcolorDepth"></th>
+                </tr>
+            </table>
+
+      <h4>Why Security is Important:</h4>
+      <div class="endp">
+        <p>There are many pitfalls while online that one could fall into so the
+          more you know, the better you are off navigating around online. A
+          place to start learning where to secure are in the links above as well as
+          basic common sense practices. Like, do not click on suspicious emails
+          or links. Another is to know what information your browser gives out to web apps
+          about your machine like in the chart above.</p>
+
+
+<script>
+
+
+
+function webData() {
+    'use strict';
+    document.getElementById("varappName").innerHTML = navigator.appName;
+    document.getElementById("varappVersion").innerHTML = navigator.appVersion;
+    document.getElementById("varplatform").innerHTML = navigator.platform;
+    document.getElementById("varheight").innerHTML = screen.height;
+    document.getElementById("varwidth").innerHTML = screen.width;
+    document.getElementById("varcolorDepth").innerHTML = screen.colorDepth;
+    document.getElementById("varuserAgent").innerHTML = navigator.userAgent;
+}
+
+document.getElementById("data").addEventListener("load", webData());
+
+</script>
+</body>
+</html>

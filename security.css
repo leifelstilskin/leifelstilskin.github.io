@@ -1,0 +1,78 @@
+html{
+  background-image: url("rooftops.jpg");
+  background-blend-mode: lighten;
+  background-color:  #e6b3cc;
+  background-blend-mode: screen;
+}
+
+
+body {
+color:  black;
+    }
+
+  h1{
+    color: black;
+    margin-left: 20px;
+  }
+  h2{
+    color: black;
+    margin-left: 25px;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: normal;
+  }
+p{
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.intro{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-width: thick;
+}
+.Tech_Tips{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+h3{
+  color: black;
+  margin-left: 25px;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 5px solid;
+    border-color: black;
+    font-style: normal;
+    font-weight: normal;
+
+}
+h4{
+  margin-left: 15px;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+.endp{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  font-size: 60px;
+  font-style: normal;
+  font-weight:200;
+}
