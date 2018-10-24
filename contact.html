@@ -6,7 +6,7 @@
   <title>Contact</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
-<script src="modernizr.custom.05819.js"></script>
+<script src="./modernizr.custom.05819.js"></script>
 
   <style>
 
@@ -55,6 +55,7 @@
    // you will see the following alert(msg) pop up for each of the missing fieldsets
    // Will change the msgs when launching...maybe.
 function checkforblanksfields(){
+
 if (document.getElementById('nameinput').value == ""){
   alert('Homie...Whats your name?');
   return false;
@@ -71,7 +72,9 @@ if (document.getElementById('emailinput').value == ""){
       alert('Yo, let me know what I can do for ya');
       return false;
       }
-}
+  }
+
+
 // I'd Like to add a confirmation to the form being submitted, like another msg that confirms
 // that the form was sent. Looking at animation and javascript tutorials at the moment to
 // maybe add that next time.
@@ -119,31 +122,64 @@ enter each text field individually then submit.</p>
 <!-- Played around with borders here -->
 
 <article>
-  <!-- Chapter 4, changed from the inital contact form from chapter 3 and added a text field for
-one to leave a message, and added a project title to allow the user to describe what they would want done -->
+  <!--Chapter 6: Name thru Project fields wont submit if left blank and the email will show disclaimer if not matching set format.
+Added the radio buttons and the selection menu not going to lie had issues adding mulitple functions without messing up the first one.-->
       <form onsubmit="return checkforblanksfields()">
         <fieldset id="contactinfo">
+          <p>Please fill out all fields below:</p>
           <label for="nameinput">
             Name
-            <input type="text" id="nameinput" name="name" placeholder="First and Last Name Please" style="border: 3px solid black" />
+            <input type="text" id="nameinput" name="name" placeholder="First and Last Name Please" style="border: 3px solid black"/>
           </label>
           <label for="emailinput">
             Email
-            <input type="text" id="emailinput" name="email" placeholder="email@example.com" style="border: 3px solid black" />
+            <input type="text" id="emailinput" name="email" placeholder="email@example.com" style="border: 3px solid black"/>
           </label>
           <label for="phoneinput">
             Phone
-            <input type="text" id="phoneinput" name="phone" placeholder="###-###-####" style="border: 3px solid black"/>
+            <input type="text" id="phoneinput" name="phone" placeholder="###-###-####" style="border: 3px solid black"
+            pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
           </label>
           <label for="messageinput">
             Project Name
-            <input type="text" id="projectinput" name="project" placeholder="Project Name" style="border: 3px solid black" />
+            <input type="text" id="projectinput" name="project" placeholder="Project Name" style="border: 3px solid black" required/>
           </label>
-        </fieldset>
+          <fieldset>
+          <div>
+          <label for="selectionlist">How Did You Hear About Us?</label>
+          </div>
+                      <div class="space"></div>
+                      <div class="leftspace">
+                      <select id="list" name="list" required="required">
+                      <option value="smedia"></option>
+                      <option value="smedia">Instagram</option>
+                      <option value="stickers">Stickers</option>
+                      <option value="web">Web</option>
+                      <option value="friends">Friends</option>
+                      <option value="fbook">Facebook</option>
+                      <option value="clothing">Clothing</option>
+                      </select>
+                     </div>
+                      <div class="space"></div>
+                      </fieldset>
+                      <fieldset>
+                      <div>
+                        <label for="radiobutton">Are You A Bot?</label>
+                      </div>
+                      <div class="space"></div>
+                      <div class="leftspace">
+                         <input type="radio" name="radiobutton" id="Ybot" value="yes"/>
+                         <label for="yes">Yes</label>
+                         <input type="radio" name="radiobutton" id="Nbot" value="No"/>
+                         <label for="no">No</label>
+                      </div>
+                      
+                   </fieldset>
+      </fieldset>
         <fieldset id="textfield">
           <textarea id="message" placeholder="Leave A Message..." style="width: 700px; height:200px; border: 3px solid black"></textarea>
         </fieldset>
-        <fieldset id="submitbutton">
+  <fieldset id="submitbutton">
           <input type="submit" value="Submit" />
         </fieldset>
      </form>
@@ -161,6 +197,8 @@ function insertPlaceholders(){
     "###-###-####";
     document.getElementById("projectinput").value =
     "Project Name";
+    document.getElementById("messageinput").value =
+    "Leave A Message..";
   }
 }
   if (window.addEventListener){
@@ -169,6 +207,7 @@ function insertPlaceholders(){
 } else if (window.attachEvent){
   window.attachEvent("onload", insertPlaceholders);
 }
+
 </script>
 
 </body>
