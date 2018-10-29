@@ -6,7 +6,7 @@
   <title>Homepage</title>
 <meta charset="utf-8">
 <script src="modernizr.custom.05819.js"></script>
-
+<script src="datebox.js"></script>
   <style>
 
   body{
@@ -57,6 +57,7 @@
 .
 p{
   text-align: left;
+  margin-right: 25px;
 }
 
     </style>
@@ -98,12 +99,6 @@ took a trip to Tokyo Japan seeking out new influences and rad street Photography
 shots on 35mm Cameras. That gallery is soon to come.</p>
 </div>
 
-<div class="videos" style="float: right;">
-  <h4>What the crew was blasting during the trip</h4>
-<iframe width="420" height="345" align="left" src="https://www.youtube.com/embed/Pp9CwX0oOWg">
-</iframe>
-</div>
-
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -127,6 +122,31 @@ shots on 35mm Cameras. That gallery is soon to come.</p>
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
+
+<main class="dateBox">
+  <div>
+    <h4>Date Box: Chapter 7</h1>
+      <!--Did some looking around how to display live time found a tutorial on W3W3schools
+    and thought it would be cool to apply what I learned from that tutorial here.  -->
+      <h5>Current Date</h5>
+      <p id="live_date"></p>
+      <script>
+      var live_d = new Date();
+      document.getElementById("live_date").innerHTML = live_d;
+    </script>
+
+    <p>Objective: Input a date, submit it, the function tells you how much time has passed.</p>
+      <div>
+        <input type="date" id="date" placeholder="mm/dd/yyyy" style="border: 3px solid black">
+        <button onclick="findDate()">Get Results</button>
+
+      </div>
+    <!--Where the data from the function is presented  -->
+    <p>Time since entered date:</p>
+    <p class="results" id="results"></p>
+  </div>
+</main>
+
 
 
   </body>

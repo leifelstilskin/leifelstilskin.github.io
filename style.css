@@ -26,6 +26,14 @@ color:  black;
     text-transform: capitalize;
     font-size: 25px;
 
-}
 
+}
+.dateBox{
+  border-style: solid;
+   border-width: thick;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-bottom: 30px;
+   margin-top: 100px;
+  float: center center;
 }
