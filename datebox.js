@@ -17,8 +17,8 @@ function findDate (){
 	var mSeconds = today.getTime() - inputDate.getTime();
 	var daysDiff = mSeconds/(86400000);
 // --- days changed to years
-	var years = Math.floor(daysDiff/365);
-	var yRemainder = daysDiff % 365;
+	var years = Math.floor(daysDiff/372);
+	var yRemainder = daysDiff % 372;
 
 	var months = Math.floor(yRemainder/31);
 	var mRemainder = yRemainder % 31;
