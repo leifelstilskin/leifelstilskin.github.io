@@ -2,11 +2,12 @@
 <html lang="en">
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="projects.css">
   <title>Projects</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <script src="modernizr.custom.05819.js"></script>
+<script src="projects.js"></script>
 
   <style>
 
@@ -66,19 +67,37 @@
     <a href="security.html">Security</a>
   </div>
 
-  <h1>What we do</h1>
-  <p style="padding-left:16px">Here is where I will want to create a responsive
-  photo gallery of past graphic projects and tshirt designs, or possibly where
-  I will put my lookbooks for Tshirt drops.</p>
-  <!-- Here is where I would but a gallery grid, with each grib box expanding
-after being clicked to show more of that one project -->
+<article class="itemList">
+<h1>Chapter 8</h1>
+  <form>
+    <!-- Below are the components of the input data the user can enter -->
+               <input type="checkbox" id="prints" value="Prints" name="serviceItems" />
+                     <label for="prints" id="prints_Label">Prints</label>
+                  <input type="checkbox" id="t-shirts" value="T-shirts" name="serviceItems" />
+                     <label for="tshirts" id="t-shirts_Label">T-shirts</label>
+                <input type="checkbox" id="hoodies" value="Hoodies" name="serviceItems" />
+                     <label for="hoodies" id="hoodies_Label">Hoodies</label>
+               <input type="checkbox" id="stickers" value="Stickers" name="serviceItems" />
+                     <label for="stickers" id="stickers_Label">Stickers</label>
+                  <input type="checkbox" id="beanies" value="Beanies" name="serviceItems" />
+                     <label for="beanies" id="beanies_Label">Beanies</label>
 
 
-<div id="validator">
-<a href="http://validator.w3.org/nu/?doc=https://projects.html">
-HTML 5 Validation</a>
+                  <input type="button" onclick="submitServices()" id="submit" value="Submit" />
 
-</div>
+                  <div id="serviceItems">
+                        <h2>Products:</h2>
+                        <ul id="productItems">
+                        </ul>
+                     </div>
+         </form>
+
+            </article>
+
+
+
+
+
 
 </body>
 </html>
