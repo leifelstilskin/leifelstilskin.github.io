@@ -6,7 +6,8 @@
   <title>Contact</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
-<script src="./modernizr.custom.05819.js"></script>
+<script src="modernizr.custom.05819.js"></script>
+<script src="form_validation.js"></script>
 
   <style>
 
@@ -49,11 +50,7 @@
   }
   </style>
    <script>
-   // here are my alert functions for my error alerts. Each if statement set for
-   // each text field with proper msgs for what is missing in each text field
-   // Form will not send if any of these fields are blank or even if one is. If you try
-   // you will see the following alert(msg) pop up for each of the missing fieldsets
-   // Will change the msgs when launching...maybe.
+
 function checkforblanksfields(){
 
 if (document.getElementById('nameinput').value == ""){
@@ -72,12 +69,11 @@ if (document.getElementById('emailinput').value == ""){
       alert('Yo, let me know what I can do for ya');
       return false;
       }
+      if (document.getElementById('textfield').value == ""){
+        alert('Please give me a brief desription about what youre looking for.');
+        return false;
+        }
   }
-
-
-// I'd Like to add a confirmation to the form being submitted, like another msg that confirms
-// that the form was sent. Looking at animation and javascript tutorials at the moment to
-// maybe add that next time.
   </script>
 </head>
 
@@ -94,9 +90,6 @@ compressed and hold its resolution well enough -->
 <img src="skinandeyes.jpg" alt="eye"  width="200" height="200">
 <img src="skinandeyes.jpg" alt="eye"  width="200" height="200">
 </div>
-
-<!-- Menu Navigation, looking into adding a dropdown menu to projects to lead to
-different galleries -->
 <div class="topnav">
     <a class="active" href="index.html">Home</a>
     <a href="#about">Blog</a>
@@ -112,19 +105,17 @@ different galleries -->
 <p>Hey we love working on our designs and shirts but we love to design and create
 for others as well. Have a design you need help tweaking, creating and or drafting
 drop us a line. We are more than happy to work for other people a well.</p>
-<!--I would add a contact box at this point (chapter1) UPDATE (chapter4): DONE -->
 
 <h2>Contact Us!</h2>
 <p> Here is another project from Chapter 3 using a conditional statement in regards to checking
 browser support of the HTML5 placeholder. UPDATE for Chapter 4, added error messages
 when trying to submit form without filling text fields. To see all error alerts
 enter each text field individually then submit.</p>
-<!-- Played around with borders here -->
 
+<!-- Chapter 9, was kinda unsure what to do for this so I went over my form and made sure there were validation checks for all of the points of data entry
+Like with the phone number and email, that they meet typical standards of format. -->
 <article>
-  <!--Chapter 6: Name thru Project fields wont submit if left blank and the email will show disclaimer if not matching set format.
-Added the radio buttons and the selection menu not going to lie had issues adding mulitple functions without messing up the first one.-->
-      <form onsubmit="return checkforblanksfields()">
+      <form id="contact_me" onsubmit="return checkforblanksfields()">
         <fieldset id="contactinfo">
           <p>Please fill out all fields below:</p>
           <label for="nameinput">
@@ -133,7 +124,7 @@ Added the radio buttons and the selection menu not going to lie had issues addin
           </label>
           <label for="emailinput">
             Email
-            <input type="text" id="emailinput" name="email" placeholder="email@example.com" style="border: 3px solid black"/>
+            <input type="email" id="emailinput" method="get" name="email" placeholder="email@example.com" onsubmit="" style="border: 3px solid black"/>
           </label>
           <label for="phoneinput">
             Phone
@@ -142,7 +133,7 @@ Added the radio buttons and the selection menu not going to lie had issues addin
           </label>
           <label for="messageinput">
             Project Name
-            <input type="text" id="projectinput" name="project" placeholder="Project Name" style="border: 3px solid black" required/>
+            <input type="text" id="projectinput" name="project" placeholder="Project Name" style="border: 3px solid black" required="required"/>
           </label>
           <fieldset>
           <div>
@@ -173,11 +164,11 @@ Added the radio buttons and the selection menu not going to lie had issues addin
                          <input type="radio" name="radiobutton" id="Nbot" value="No"/>
                          <label for="no">No</label>
                       </div>
-                      
+
                    </fieldset>
       </fieldset>
         <fieldset id="textfield">
-          <textarea id="message" placeholder="Leave A Message..." style="width: 700px; height:200px; border: 3px solid black"></textarea>
+          <textarea id="message" placeholder="Leave A Message..." style="width: 700px; height:200px; border: 3px solid black" required="required"></textarea>
         </fieldset>
   <fieldset id="submitbutton">
           <input type="submit" value="Submit" />
@@ -185,7 +176,11 @@ Added the radio buttons and the selection menu not going to lie had issues addin
      </form>
    </article>
 
-<!-- Chapter 3, added this as extra practice with one of the hands on projects from chapter 3-->
+<div>
+   <h3>Table 9-4 example</h3>
+   <img src="web_validationexample.svg" alt="example" width="1000" height="500">
+ </div>
+
 <script>
 function insertPlaceholders(){
   if (!modernizr.input.placeholder){
