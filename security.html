@@ -157,9 +157,6 @@ along with a one-sentence summary of each."<em></p>
 
 
 <script>
-
-
-
 function webData() {
     'use strict';
     document.getElementById("varappName").innerHTML = navigator.appName;
@@ -172,7 +169,31 @@ function webData() {
 }
 
 document.getElementById("data").addEventListener("load", webData());
+</script>
+
+<a href="#" id="user_location">Your Location</a>
+
+<div id="user_map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13330.910339857375!2d-111.79127634999999!3d33.35206605!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1542686065768" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+<script>
+var user_pos = function(pos){
+  var lat   = pos.coords.latitude,
+    long    = pos.coords.longitude,
+    coords  = lat + ', ' + long;
+document.getElementById('google_map').setAttribute('src', 'https://www.google.com/maps?q=' + coords + '&z=60&output=embed');
+}
+
+document.getElementById('user_location').onclick = function() {
+  navigator.geolocation.getCurrentPosition(user_pos);
+  return false;
+}
+
 
 </script>
+
+
+
 </body>
 </html>
