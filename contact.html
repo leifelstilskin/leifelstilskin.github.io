@@ -176,10 +176,86 @@ Like with the phone number and email, that they meet typical standards of format
      </form>
    </article>
 
-<div>
+<div id="Chapter9">
    <h3>Table 9-4 example</h3>
-   <img src="web_validationexample.svg" alt="example" width="1000" height="500">
+   <img src="web_validationexample.svg" alt="example" width="1250" height="500">
+   <!--Not sure as to why the image is so compressed it wasnt like that when i made it in illustrator
+ maybe its the width i set it at?  -->
  </div>
+
+
+<!-- Chapter 11
+This chapter through me for a loop with all the talk abut Proxies, PHP, APIs ect.
+I took a couple of the hands on assignments and added onto them. Changed the look and did them to
+get an idea how they work. This was harder than I thought so I needed the walk thru that the hands on
+assignments provided. I liked the concept of zipcodes and thought it would be something cool to
+build on. I hope thats okay. So I did the last two hands on from begining to end and added
+more countries, countries I visited to make it interesting for myself to do.  -->
+ <article id="zip_codes">
+       <h1>Countries Visited</h1>
+       <form>
+         <!-- Below are all the inputs and buttons youll see on the form,
+       as well as the field boxes for the information that will be pulled from the site
+     with the data of the zip_codes -->
+         <fieldset id="countryset">
+           <label for="germany" id="germanylabel">Germany</label>
+           <input id="germany" type="radio" value="germany"
+           name="country" />
+
+           <label for="france" id="francelabel">France</label>
+           <input id="france" type="radio" value="france"
+           name="country" />
+
+           <label for="mexico" id="mexicolabel">Mexico</label>
+           <input id="mexico" type="radio" value="mexico"
+           name="country" />
+
+           <label for="netherlands" id="netherlandslabel">Netherlands</label>
+           <input id="netherlands" type="radio" value="netherlands"
+           name="country" />
+
+           <label for="dominicanrepublic" id="dominicanrepubliclabel">Dominican Republic</label>
+           <input id="dominicanrepublic" type="radio" value="dominicanrepublic"
+           name="country" />
+
+           <label for="czechrepublic" id="czechrepubliclabel">Czech Republic</label>
+           <input id="czechrepublic" type="radio" value="czechrepublic"
+           name="country" />
+
+           <label for="japan" id="japanlabel">Japan</label>
+           <input id="japan" type="radio" value="japan"
+           name="country" />
+
+           <label for="unitedkingdom" id="unitedkingdomlabel">United Kingdom</label>
+           <input id="unitedkingdom" type="radio" value="unitedkingdom"
+           name="country" />
+
+           <label for="us" id="uslabel">United States</label>
+           <input id="us" type="radio" value="us" name="country" />
+         </fieldset>
+
+
+          <!--Text field where zipcodes are provided  -->
+          <fieldset id="zipset">
+             <label for="zip" id="ziplabel">Postal Code</label>
+             <input id="zip" type="number" />
+          </fieldset>
+
+          <!--Text fields where cities and States/Territories are listed.  -->
+          <fieldset id="csset">
+             <label for="city" id="citylabel">City</label>
+             <input id="city" type="text" />
+             <label for="state" id="statelabel">State</label>
+             <input id="state" type="text" />
+          </fieldset>
+       </form>
+    </article>
+    <!-- Below is the js file that holds the functions for Chapter 11s case project. -->
+<script src="countries_zip.js"></script>
+
+
+
+
 
 <script>
 function insertPlaceholders(){

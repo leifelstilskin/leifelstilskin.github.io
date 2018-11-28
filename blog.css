@@ -1,0 +1,11 @@
+#instafeed ul
+{
+list-style-type: none;
+}
+
+#instafeed ul li {
+  width: 320px;
+      float: left;
+      margin-right: 0px;
+
+}
