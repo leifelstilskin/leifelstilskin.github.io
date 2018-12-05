@@ -7,7 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <script src="modernizr.custom.05819.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="projects.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#vanish-yo").hide();
+    });
+});
+</script>
 
   <style>
 
@@ -67,7 +75,7 @@
     <a href="security.html">Security</a>
   </div>
 
-<article class="itemList">
+<article id="vanish-yo" class="itemList">
 <h1>Chapter 8</h1>
   <form>
     <!-- Below are the components of the input data the user can enter -->
@@ -93,6 +101,9 @@
          </form>
 
             </article>
+            <button>Make this project dip-out</button>
+
+
 
 
 
